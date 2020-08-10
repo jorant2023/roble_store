@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block bodydesktop %}
+<div class="container d-none d-xl-block">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-img-top" src="{{producto.srcimagen}}" alt="Card image cap">
+                    <h5 class="card-title"><a href="#modalProducto" title="View Product">{{producto.nombreproducto}}</a></h5>
+                    <p class="card-text">{{producto.presentacion}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <p class="btn btn-primary btn-block">S/ {{producto.preciounidad}}</p>
+                        </div>
+                        <div class='row'>
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container d-none d-lg-block d-xl-none">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-img-top" src="{{producto.srcimagen}}" alt="Card image cap">
+                    <h5 class="card-title"><a href="#modalProducto" title="View Product">{{producto.nombreproducto}}</a></h5>
+                    <p class="card-text">{{producto.presentacion}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <p class="btn btn-primary btn-block">S/ {{producto.preciounidad}}</p>
+                        </div>
+                        <div class='row'>
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container d-none d-md-block d-lg-none">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-img-top" src="{{producto.srcimagen}}" alt="Card image cap">
+                    <h5 class="card-title"><a href="#modalProducto" title="View Product">{{producto.nombreproducto}}</a></h5>
+                    <p class="card-text">{{producto.presentacion}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <p class="btn btn-primary btn-block">S/ {{producto.preciounidad}}</p>
+                        </div>
+                        <div class='row'>
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock bodydesktop %}
+{% block bodymobile %}
+<div class="container d-none d-sm-block d-md-none">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-img-top" src="{{producto.srcimagen}}" alt="Card image cap">
+                    <h5 class="card-title"><a href="#modalProducto" title="View Product">{{producto.nombreproducto}}</a></h5>
+                    <p class="card-text">{{producto.presentacion}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <p class="btn btn-primary btn-block">S/ {{producto.preciounidad}}</p>
+                        </div>
+                        <div class='row'>
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container d-block d-sm-none">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <img class="card-img-top" src="{{producto.srcimagen}}" alt="Card image cap">
+                    <h5 class="card-title"><a href="#modalProducto" title="View Product">{{producto.nombreproducto}}</a></h5>
+                    <p class="card-text">{{producto.presentacion}}</p>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <p class="btn btn-primary btn-block">S/ {{producto.preciounidad}}</p>
+                        </div>
+                        <div class='row'>
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock bodymobile%}

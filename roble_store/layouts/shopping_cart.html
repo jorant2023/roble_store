@@ -1,0 +1,22 @@
+
+
+
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+
+    <tbody>
+      {% for contact in contacts %}
+      <div class="s8" style="top:49px;left:47px;width:161px;height:103px;">
+        <td>{{contact.1}}</td>
+        <td>{{contact.4}}</td>
+        <td>{{contact.5}}</td>
+        <td>
+            <input type="number" name="numero" value="1" min="1" max="50" step="1" />
+        </td>
+        <td>
+          <a href="/edit/{{contact.0}}" class="btn btn-secondary">Editar</a>
+          <a href="/delete/{{contact.0}}" class="btn btn-danger btn-delete">Borrar</a>
+        </td>
+      </div>
+      {% endfor %}
+    </tbody>
+  </table>

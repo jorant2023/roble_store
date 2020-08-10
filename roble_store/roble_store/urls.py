@@ -1,4 +1,4 @@
-"""roble_store URL Configuration
+"""roble_food_dj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .apps.mainapp.views import home, busqueda
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',home,name='home'),
+    path('busqueda/<int:id>/',busqueda,name='busqueda')
 ]
