@@ -5,7 +5,7 @@ from .models import Productos, Categorias
 def busqueda(request,id):
     if request.method == 'GET':
         identificador=str(id)
-        query1="SELECT * FROM roblefood.mainapp_productos WHERE idCategoria="+identificador
+        query1="SELECT * FROM testing.mainapp_productos WHERE idCategoria="+identificador
         productos = Productos.objects.raw(query1)
     categorias = Categorias.objects.all()
     contexto = {
@@ -18,11 +18,11 @@ def busqueda(request,id):
 def home(request):
 
     if request.method == 'GET':
-        query1="SELECT * FROM roblefood.mainapp_productos"
+        query1="SELECT * FROM testing.mainapp_productos"
         productos = Productos.objects.raw(query1)
     else :
         busqueda = request.POST['nombre']
-        query1="SELECT * FROM roblefood.mainapp_productos WHERE nombreProducto LIKE '%%"+busqueda+"%%'"
+        query1="SELECT * FROM testing.mainapp_productos WHERE nombreProducto LIKE '%%"+busqueda+"%%'"
         productos = Productos.objects.raw(query1)
     categorias = Categorias.objects.all()
     contexto = {

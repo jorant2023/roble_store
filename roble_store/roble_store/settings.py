@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'roble_store.apps.mainapp',
+    'roble_store.apps.authentication'
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'roble_store.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'roblefood',
+        'NAME': 'testing',
         'USER': 'root',
         'PASSWORD': '123456789',
         'HOST': 'localhost',

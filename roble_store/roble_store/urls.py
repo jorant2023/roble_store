@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .apps.mainapp.views import home, busqueda
+from .apps.authentication.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home,name='home'),
-    path('busqueda/<int:id>/',busqueda,name='busqueda')
+    path('busqueda/<int:id>/',busqueda,name='busqueda'),
+    path('login',register,name='login')
 ]
