@@ -21,7 +21,8 @@ def home(request):
         query1="SELECT * FROM testing.mainapp_productos"
         productos = Productos.objects.raw(query1)
     else :
-        busqueda = request.POST['nombre']
+        print('que mierda hace aqui')
+        busqueda = request.POST['busqueda']
         query1="SELECT * FROM testing.mainapp_productos WHERE nombreProducto LIKE '%%"+busqueda+"%%'"
         productos = Productos.objects.raw(query1)
     categorias = Categorias.objects.all()
